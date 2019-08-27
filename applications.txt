@@ -1,0 +1,42 @@
+.
+..
+.DS_Store
+.localized
+Adobe After Effects CC 2019
+Adobe Audition CC 2019
+Adobe Creative Cloud
+Adobe Lightroom Classic CC
+Adobe Media Encoder CC 2019
+Adobe Photoshop CC 2019
+Adobe Premiere Pro CC 2019
+Android File Transfer.app
+Atom.app
+BetterTouchTool.app
+Blender.app
+Blenderplayer.app
+Evernote.app
+Final Cut Pro.app
+Flash Player.app
+Flux.app
+Ghost.app
+Google Chrome.app
+Macs Fan Control.app
+Microsoft Excel.app
+Microsoft PowerPoint.app
+Microsoft Word.app
+OneDrive.app
+R.app
+RStudio.app
+Safari.app
+Skype.app
+Spotify.app
+TeX
+Texts.app
+Todoist.app
+Utilities
+Xcode-beta.app
+blender2.8.app
+calibre.app
+iTerm.app
+qbittorrent.app
+texstudio.app

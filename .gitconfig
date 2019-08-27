@@ -1,0 +1,7 @@
+# This is Git's per-user configuration file.
+[user]
+	email = 22137276+al-jshen@users.noreply.github.com
+	name = Jeff Shen
+# Please adapt and uncomment the following lines:
+#	name = Jeff Shen
+#	email = js@Jeffs-MacBook-Pro-2.local

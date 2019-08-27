@@ -1,0 +1,7 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =5
+let g:netrw_dirhist_1='/Users/js/.vim'
+let g:netrw_dirhist_2='/Users/js/programs'
+let g:netrw_dirhist_3='/Users/js'
+let g:netrw_dirhist_4='/Users/js/programs/deep-learning-v2-pytorch/recurrent-neural-networks'
+let g:netrw_dirhist_5='/Users/js/.vim'
