@@ -53,6 +53,8 @@ alias ...='cd ../..'
 alias ....='cd ../../..'
 alias md='mkdir'
 alias rd='rmdir'
+alias vim='nvim'
+alias v='nvim'
 
 # | custom functions | #
 vcomp() {
