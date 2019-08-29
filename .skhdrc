@@ -1,0 +1,37 @@
+# open applications
+cmd - return : /Users/js/programs/scripts/openIterm.sh
+cmd - q      : /Users/js/programs/scripts/openChrome.sh
+
+# reload yabai configuration file
+ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
+
+
+# float / unfloat window and center on screen
+cmd + alt - f : yabai -m window --toggle float;\
+                yabai -m window --grid 4:4:1:1:2:2
+
+
+# switch spaces
+cmd - 1 : /Users/js/programs/scripts/changeSpaces.sh 1
+cmd - 2 : /Users/js/programs/scripts/changeSpaces.sh 2
+cmd - 3 : /Users/js/programs/scripts/changeSpaces.sh 3   
+cmd - 4 : /Users/js/programs/scripts/changeSpaces.sh 4 
+cmd - 5 : /Users/js/programs/scripts/changeSpaces.sh 5 
+cmd - 6 : /Users/js/programs/scripts/changeSpaces.sh 6 
+cmd - 7 : /Users/js/programs/scripts/changeSpaces.sh 7 
+cmd - 8 : /Users/js/programs/scripts/changeSpaces.sh 8 
+cmd - 9 : /Users/js/programs/scripts/changeSpaces.sh 9 
+cmd - 0 : /Users/js/programs/scripts/changeSpaces.sh 10 
+
+# send window to space
+shift + cmd - 1 : yabai -m window --space  1; /Users/js/programs/scripts/changeSpaces.sh 1
+shift + cmd - 2 : yabai -m window --space  2; /Users/js/programs/scripts/changeSpaces.sh 2
+shift + cmd - 3 : yabai -m window --space  3; /Users/js/programs/scripts/changeSpaces.sh 3   
+shift + cmd - 4 : yabai -m window --space  4; /Users/js/programs/scripts/changeSpaces.sh 4 
+shift + cmd - 5 : yabai -m window --space  5; /Users/js/programs/scripts/changeSpaces.sh 5 
+shift + cmd - 6 : yabai -m window --space  6; /Users/js/programs/scripts/changeSpaces.sh 6 
+shift + cmd - 7 : yabai -m window --space  7; /Users/js/programs/scripts/changeSpaces.sh 7 
+shift + cmd - 8 : yabai -m window --space  8; /Users/js/programs/scripts/changeSpaces.sh 8 
+shift + cmd - 9 : yabai -m window --space  9; /Users/js/programs/scripts/changeSpaces.sh 9 
+shift + cmd - 0 : yabai -m window --space 10; /Users/js/programs/scripts/changeSpaces.sh 10 
+

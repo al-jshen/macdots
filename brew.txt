@@ -25,6 +25,7 @@ imagemagick
 isl
 jemalloc
 jpeg
+jq
 lame
 ldns
 leptonica
@@ -72,6 +73,7 @@ nettle
 nginx
 nmap
 node
+oniguruma
 opencore-amr
 openexr
 openjpeg
@@ -99,6 +101,7 @@ screenresolution
 sdl2
 shared-mime-info
 sip
+skhd
 snappy
 speex
 sqlite
@@ -118,6 +121,7 @@ x264
 x265
 xvid
 xz
+yabai
 youtube-dl
 zimg
 zsh
