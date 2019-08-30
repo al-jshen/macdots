@@ -17,9 +17,6 @@ refreshFrequency: 2500
 render: (output) -> """
     <i class="fab fa-spotify"></i>
     <p>#{output}</p>
-
-
-
 """
 
 # the CSS style for this widget, written using Stylus

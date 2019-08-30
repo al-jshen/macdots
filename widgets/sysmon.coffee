@@ -19,7 +19,12 @@ render: ( ) ->
   """
 <div class="mainbox">
 
-    <span class="output" id="netid-output"></span>
+    <div class="widg" id="netid">
+    <div class="icon-container" id='netid-icon-container'>
+        <i class="fas fa-wifi"></i>
+    </div>
+        <span class="output" id="netid-output"></span>
+    </div>
 
     <div class="widg" id="dwl">
     <div class="icon-container" id='dwl-icon-container'>
@@ -95,7 +100,7 @@ update: ( output, domEl ) ->
     @handleUsageColour( domEl, Number( hdd.replace( /%/g, "") ), '#hdd' )
     @handleUpDownColour( domEl, Number( @convertBytes(upl) ) , '#upl')
     @handleUpDownColour( domEl, Number( @convertBytes(dwl) ) , '#dwl')
-    @handleConnColour( domEl, netid, '#netid-output' )
+    @handleConnColour( domEl, netid, '#netid' )
 
 
 # change colour classes based on value
@@ -169,11 +174,10 @@ style: """
 
     .icon-container
         margin-right: 0.3em
-        color: #f2f2f2
 
-    #netid-output
+    .output
+        color: #f2f2f2
         white-space: nowrap
-        margin-right: 0.5em
 
     .blue
         color: #73AEEA
