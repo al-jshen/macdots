@@ -24,14 +24,14 @@ cmd - 9 : /Users/js/programs/scripts/changeSpaces.sh 9
 cmd - 0 : /Users/js/programs/scripts/changeSpaces.sh 10 
 
 # send window to space
-shift + cmd - 1 : yabai -m window --space  1; /Users/js/programs/scripts/changeSpaces.sh 1
-shift + cmd - 2 : yabai -m window --space  2; /Users/js/programs/scripts/changeSpaces.sh 2
-shift + cmd - 3 : yabai -m window --space  3; /Users/js/programs/scripts/changeSpaces.sh 3   
-shift + cmd - 4 : yabai -m window --space  4; /Users/js/programs/scripts/changeSpaces.sh 4 
-shift + cmd - 5 : yabai -m window --space  5; /Users/js/programs/scripts/changeSpaces.sh 5 
-shift + cmd - 6 : yabai -m window --space  6; /Users/js/programs/scripts/changeSpaces.sh 6 
-shift + cmd - 7 : yabai -m window --space  7; /Users/js/programs/scripts/changeSpaces.sh 7 
-shift + cmd - 8 : yabai -m window --space  8; /Users/js/programs/scripts/changeSpaces.sh 8 
-shift + cmd - 9 : yabai -m window --space  9; /Users/js/programs/scripts/changeSpaces.sh 9 
-shift + cmd - 0 : yabai -m window --space 10; /Users/js/programs/scripts/changeSpaces.sh 10 
+cmd + shift - 1 : /Users/js/programs/scripts/moveWindow.sh 1
+cmd + shift - 2 : /Users/js/programs/scripts/moveWindow.sh 2 
+cmd + shift - 3 : /Users/js/programs/scripts/moveWindow.sh 3
+cmd + shift - 4 : /Users/js/programs/scripts/moveWindow.sh 4
+cmd + shift - 5 : /Users/js/programs/scripts/moveWindow.sh 5
+cmd + shift - 6 : /Users/js/programs/scripts/moveWindow.sh 6
+cmd + shift - 7 : /Users/js/programs/scripts/moveWindow.sh 7
+cmd + shift - 8 : /Users/js/programs/scripts/moveWindow.sh 8
+cmd + shift - 9 : /Users/js/programs/scripts/moveWindow.sh 9
+cmd + shift - 0 : /Users/js/programs/scripts/moveWindow.sh 10
 
