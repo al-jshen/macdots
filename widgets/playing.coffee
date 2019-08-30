@@ -30,7 +30,7 @@ style: """
     border-radius: 0px
     border: 0px solid #fff
     color: #fff
-    background-color: #2f2f2f
+    background-color: #272C34
     font-family: Roboto
     font-size: 12px
 
