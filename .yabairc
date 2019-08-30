@@ -7,7 +7,7 @@ yabai -m config layout bsp
 ### | padding and gaps | ###
 
 # outer gaps
-yabai -m config top_padding    50
+yabai -m config top_padding    75
 yabai -m config bottom_padding 50
 yabai -m config left_padding   50
 yabai -m config right_padding  50
