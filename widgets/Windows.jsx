@@ -48,8 +48,6 @@ function getIcons(apps, active) {
         icon = <i className="fab fa-spotify" />;
       } else if (value == 'Code') {
         icon = <i className="fas fa-code" />;
-      } else if (value == 'Dashlane') {
-        icon = <i className="fas fa-unlock" />;
       } else {
         console.log(`Finding else for: ${value}`);
         icon = <i className="far fa-question-circle" />;
@@ -73,7 +71,7 @@ function getIcons(apps, active) {
 const renderWindow = (icon, active) => {
   const color = (active) ? '#FFFFFF' : '#282828';
   return (
-    <i style={{ padding: '0 5px', color }}>
+    <i style={{ padding: '0 0.4em', color }}>
       {icon}
     </i>
 
@@ -82,13 +80,14 @@ const renderWindow = (icon, active) => {
 
 const renderSpace = (space, active, backColor, spaceCounter) => {
   const style = {
-    color: '#282828',
+    color: '#2f2f2f',
     background: backColor,
+    padding: '0.25em 0.3em 0.25em 0',
   };
   return (
     <div style={style}>
         &nbsp;&nbsp;
-      <i style={{ fontWeight: '800' }}>
+      <i style={{ fontWeight: '600', padding: '0 0.2em'}}>
 [
         {spaceCounter}
 ]

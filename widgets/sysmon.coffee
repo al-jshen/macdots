@@ -151,12 +151,14 @@ style: """
     background-color: #272C34
     font-family: Roboto
     font-size: 12px
+    height: 30px
+    padding: .1em 0.5em 0.1em 0.5em
 
+    position: fixed
     left: 80%
     transform translateX(-50%)
     top: 1%
-    height: 30px
-    padding: .1em 0.5em 0.1em 0.5em
+
 
     .mainbox
         display: flex

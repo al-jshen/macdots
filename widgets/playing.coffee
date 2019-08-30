@@ -39,6 +39,7 @@ style: """
     justify-content: center
     align-items: center
 
+    position: fixed
     left: 50%
     transform translateX(-50%)
     top: 1%
