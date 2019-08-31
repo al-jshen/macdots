@@ -1,0 +1,38 @@
+{
+    "coc.preferences.colorSupport": true,
+    "highlight.document.enable": true,
+    "highlight.colors.enable": true,
+
+    "python.jediEnabled": false,
+    "python.linting.enabled": true,
+    "python.linting.flake8Enabled": true,
+    "python.linting.pylintEnabled": true,
+    "python.linting.pep8Enabled": true,
+    "python.formatting.provider": "black",
+    "python.autoComplete.addBrackets": true,
+
+    "languageserver": {
+      "python": {
+        "command": "python",
+        "args": [
+          "-mpyls",
+          "-vv",
+          "--log-file",
+          "/tmp/lsp_python.log"
+        ],
+        "trace.server": "verbose",
+        "filetypes": [
+          "python"
+        ],
+        "settings": {
+          "pyls": {
+            "enable": true,
+            "trace": {
+              "server": "verbose"
+            },
+            "commandPath": "/usr/local/bin/python"
+            }
+        }
+      }
+    }
+}

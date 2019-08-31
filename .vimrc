@@ -1,20 +1,25 @@
 call plug#begin('~/.vim/plugged/')
 	Plug 'vim-scripts/indentpython.vim'
-	"Plug 'Valloric/YouCompleteMe'
 	Plug 'vim-syntastic/syntastic'
 	Plug 'nvie/vim-flake8'
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'Raimondi/delimitMate'
-	Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+    Plug 'Shougo/echodoc.vim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
-	Plug 'davidhalter/jedi-vim'
-	Plug 'zchee/deoplete-jedi'
+	"Plug 'davidhalter/jedi-vim'
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'scrooloose/nerdtree'
     Plug 'vim-airline/vim-airline'
+    Plug 'ervandew/supertab'
+
+	"Plug 'Valloric/YouCompleteMe' " too heavy
+	"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
+    "Plug 'zchee/deoplete-jedi' "too slow
+    Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+set statusline^=%{coc#status()}
 
 " Syntax Highlighting
 let python_highlight_all=1
@@ -36,6 +41,9 @@ au BufNewFile,BufRead *.py
     \ set autoindent |
     \ set fileformat=unix
 
+" Python Provider
+let g:python3_host_prog = '/usr/local/bin/python3'
+
 " UTF-8 Support
 set encoding=utf-8
 
@@ -43,11 +51,18 @@ set encoding=utf-8
 set bs=2
 
 " Deoplete 
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_delay = 100
+"let g:deoplete#enable_at_startup = 1
+"let g:deoplete#auto_complete_delay = 0
+"let g:deoplete#max_list = 20
+"let g:deoplete#sources#jedi#enable_type_info = 0
+"let g:deoplete#sources#jedi#show_docstring = 1
+
+" echodoc.vim
+set cmdheight=2
+let g:echodoc#enable_at_startup = 1
 
 " Disable jedi-vim completions in favour of deoplete-jedi's
-let g:jedi#completions_enabled = 0
+"let g:jedi#completions_enabled = 0
 
 " Syntastic Configurations
 let g:syntastic_python_checkers = ['flake8']
@@ -74,6 +89,7 @@ let g:NERDTreeMouseMode=3
 "let g:ycm_semantic_triggers = {
 "	\   'python': [ 're!\w{1}' ]
 "	\ }
+let g:SuperTabDefaultCompletionType = "<c-n>"
 set completeopt-=preview
 
 " Line Numbers
@@ -113,6 +129,9 @@ set nowrap
 
 " Enable incrementing letters
 set nrformats+=alpha
+
+" Crontab vim fix
+autocmd FileType crontab setlocal nobackup nowritebackup
 
 " Transaction file processing
 function! Process()

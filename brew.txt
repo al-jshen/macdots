@@ -67,7 +67,6 @@ msgpack
 mujs
 mysql
 ncurses
-neofetch
 neovim
 nettle
 nginx
