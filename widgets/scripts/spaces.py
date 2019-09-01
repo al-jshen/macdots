@@ -31,10 +31,15 @@ def prettify_results(spaces, windows):
         for window in windows:
             if windows[window]['id'] in spaces[space]['windows']:
                 result[str(space)][str(windows[window]['id'])] = windows[window]['app']
-    result['active'] = {str(active_window['id']): active_window['app']}
-    return result
-
-
+    filtered = {}
+    for outerkey, outerval in result.items():
+        if outerkey not in filtered.keys():
+            filtered[outerkey] = {}
+        for innerkey, innerval in outerval.items():
+            if innerval not in filtered[outerkey].values():
+                filtered[outerkey][innerkey] = innerval
+    filtered['active'] = {str(active_window['id']): active_window['app']}
+    return filtered
 
 
 def main():
