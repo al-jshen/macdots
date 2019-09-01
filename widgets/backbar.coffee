@@ -17,9 +17,9 @@ style: """
     font-size: 12px
 
     height: 30px
-    left: 5%
+    left: 0%
     top: 1%
-    width: 90%
+    width: 100%
     padding: .1em 0.6em 0.1em 0.6em
     z-index: -1
 

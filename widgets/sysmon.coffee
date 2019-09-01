@@ -29,19 +29,23 @@ render: ( ) ->
         <span class="output" id="netid-output"></span>
     </div>
 
+    <!--
     <div class="widg" id="dwl">
     <div class="icon-container" id='dwl-icon-container'>
         <i class="fas fa-download"></i>
     </div>
         <span class="output" id="dwl-output"></span>
     </div>
+    -->
 
+    <!--
     <div class="widg" id="upl">
     <div class="icon-container" id='upl-icon-container'>
         <i class="fas fa-upload"></i>
     </div>
         <span class="output" id="upl-output"></span>
     </div>
+    -->
 
     <div class="widg" id="cpu">
     <div class="icon-container" id='cpu-icon-container'>
@@ -63,8 +67,10 @@ render: ( ) ->
     </div>
         <span class="output" id="hdd-output"></span>
     </div>
-
-    <span class="output" id="datetime-output"></span>
+    
+    <div class="widg" id="datetime">
+        <span class="output" id="datetime-output"></span>
+    </div>
 </div>
 
   """
@@ -159,7 +165,7 @@ style: """
     padding: .1em 0.5em 0.1em 0.5em
 
     position: fixed
-    left: 75%
+    left: 80%
     transform translateX(-50%)
     top: 1%
 
