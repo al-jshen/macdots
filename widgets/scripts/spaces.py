@@ -39,7 +39,10 @@ def prettify_results(spaces, windows):
         for innerkey, innerval in outerval.items():
             if innerval not in filtered[outerkey].values():
                 filtered[outerkey][innerkey] = innerval
-    filtered['active'] = filtered[str(active_window['space']-1)]
+    active_space = filtered[str(active_window['space']-1)]
+    for id, app in active_space.items():
+        if app == active_window['app']:
+            filtered['active'] = {id: app}
     return filtered
 
 
