@@ -48,7 +48,10 @@ function getIcons(apps, active) {
         icon = <i className="fab fa-spotify" />;
       } else if (value == 'Code') {
         icon = <i className="fas fa-code" />;
-      } else {
+      } else if (value == 'Microsoft Excel') {
+        icon = <i className="far fa-file-excel" />
+      }
+        else {
         console.log(`Finding else for: ${value}`);
         icon = <i className="far fa-question-circle" />;
       }

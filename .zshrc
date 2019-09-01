@@ -16,8 +16,13 @@ zplugin light zsh-users/zsh-completions
 zplugin ice wait lucid atload"_zsh_autosuggest_start"
 zplugin light zsh-users/zsh-autosuggestions
 
+# completion when typing middle of word
 zstyle ':completion:*' completer _complete
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' '+l:|=* r:|=*'
+
+# shift tab to go through completion menu backwards
+bindkey '^[[Z' reverse-menu-complete
+
 
 # | highlighting | #
 zplugin ice wait lucid atinit'zpcompinit; zpcdreplay'
