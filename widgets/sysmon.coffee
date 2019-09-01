@@ -4,6 +4,8 @@ commands =
     hdd : "df / | awk 'END{print $5}'"
     net : "sh ./scripts/netspeed.sh"
     netid: "sh ./scripts/netid.sh"
+    datetime: "sh ./scripts/datetime.sh"
+
 
 
 command: "echo " +
@@ -11,7 +13,8 @@ command: "echo " +
          "$(#{ commands.mem }):::" +
          "$(#{ commands.hdd }):::" +
          "$(#{ commands.net }):::" +
-         "$(#{ commands.netid }):::"
+         "$(#{ commands.netid }):::" +
+         "$(#{ commands.datetime }):::"
 
 refreshFrequency: '1s'
 
@@ -40,8 +43,6 @@ render: ( ) ->
         <span class="output" id="upl-output"></span>
     </div>
 
-
-
     <div class="widg" id="cpu">
     <div class="icon-container" id='cpu-icon-container'>
         <i class="fas fa-microchip"></i>
@@ -63,6 +64,7 @@ render: ( ) ->
         <span class="output" id="hdd-output"></span>
     </div>
 
+    <span class="output" id="datetime-output"></span>
 </div>
 
   """
@@ -85,6 +87,7 @@ update: ( output, domEl ) ->
     upl = net[ 0 ]
     dwl = net[ 1 ]
     netid = output[ 4 ]
+    datetime = output[ 5 ]
 
 
     $( "#cpu-output").text("#{ cpu }%")
@@ -93,6 +96,7 @@ update: ( output, domEl ) ->
     $( "#upl-output").text("#{ @convertBytes(upl) }Mbps")
     $( "#dwl-output").text("#{ @convertBytes(dwl) }Mbps")
     $( "#netid-output").text("#{ netid }")
+    $( "#datetime-output").text("#{ datetime }")
 
 
     @handleUsageColour( domEl, Number( cpu ), '#cpu' )
@@ -155,7 +159,7 @@ style: """
     padding: .1em 0.5em 0.1em 0.5em
 
     position: fixed
-    left: 80%
+    left: 75%
     transform translateX(-50%)
     top: 1%
 

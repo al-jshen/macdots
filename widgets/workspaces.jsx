@@ -20,7 +20,7 @@ const style = {
     alignItems: 'center',
 
     position: 'fixed',
-    left: '20%',
+    left: '25%',
     transform: 'translateX(-50%)',
     top: '1%',
 
