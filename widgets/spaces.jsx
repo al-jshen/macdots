@@ -1,14 +1,14 @@
-import Newwindow from './Newwindow.jsx';
+import Window from './Window.jsx';
 
-export const command = "sh ./scripts/newworkspaces.sh";
+export const command = "sh ./scripts/workspaces.sh";
 
-export const refreshFrequency = false;
+export const refreshFrequency = 1000;
 
 export function render(output) {
     const dat = JSON.parse(String(output.output).replace(/\'/g, '"'));
     return (
         <div style={style}>
-            <Newwindow output={dat[0]} />
+            <Window output={dat[0]} />
         </div>
     )
 }
