@@ -14,14 +14,14 @@ cmd + alt - f : yabai -m window --toggle float;\
 # switch spaces
 cmd - 1 : /Users/js/programs/scripts/changeSpaces.sh 1
 cmd - 2 : /Users/js/programs/scripts/changeSpaces.sh 2
-cmd - 3 : /Users/js/programs/scripts/changeSpaces.sh 3   
-cmd - 4 : /Users/js/programs/scripts/changeSpaces.sh 4 
-cmd - 5 : /Users/js/programs/scripts/changeSpaces.sh 5 
-cmd - 6 : /Users/js/programs/scripts/changeSpaces.sh 6 
-cmd - 7 : /Users/js/programs/scripts/changeSpaces.sh 7 
-cmd - 8 : /Users/js/programs/scripts/changeSpaces.sh 8 
-cmd - 9 : /Users/js/programs/scripts/changeSpaces.sh 9 
-cmd - 0 : /Users/js/programs/scripts/changeSpaces.sh 10 
+cmd - 3 : /Users/js/programs/scripts/changeSpaces.sh 3
+cmd - 4 : /Users/js/programs/scripts/changeSpaces.sh 4
+cmd - 5 : /Users/js/programs/scripts/changeSpaces.sh 5
+cmd - 6 : /Users/js/programs/scripts/changeSpaces.sh 6
+cmd - 7 : /Users/js/programs/scripts/changeSpaces.sh 7
+cmd - 8 : /Users/js/programs/scripts/changeSpaces.sh 8
+cmd - 9 : /Users/js/programs/scripts/changeSpaces.sh 9
+cmd - 0 : /Users/js/programs/scripts/changeSpaces.sh 10
 
 # send window to space
 cmd + shift - 1 : /Users/js/programs/scripts/moveWindow.sh 1
