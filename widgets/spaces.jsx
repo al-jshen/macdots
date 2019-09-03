@@ -6,8 +6,8 @@ const colors = ['#D27278', '#A1C181', '#E0C085', '#83a598', '#fabd2f', '#fb4934'
 
 const renderSpace = (appList, dispColor, spaceId, spaceColor) => {
     return (
-        <div style = {{ backgroundColor: dispColor, padding: '0.1em 0.4em', margin: '0.3em'}}>
-            <i style = {{ color: spaceColor, marginRight: '0.3em' }}>
+        <div style = {{ backgroundColor: dispColor, padding: '0.1em 0.4em', margin: '0.3em', display: 'flex', alignItems: 'center' }}>
+            <i style = {{ color: spaceColor, margin: '0.1em 0.3em 0 0' }}>
                 {spaceId}
             </i>
             {appList.map((i) => i)}
@@ -20,43 +20,50 @@ const renderAppIcon = (appName) => {
     let className = null;
 
     if (appName == 'Google Chrome') {
-      className="fab fa-chrome";
+        className="la la-chrome";
     } else if (appName == 'Atom') {
-     className="fas fa-atom";
+        className="la la-code";
     } else if (appName == 'Mail') {
-     className="far fa-envelope";
+        className="far fa-envelope";
     } else if (appName == 'Todoist') {
-     className="fas fa-list-ul";
+        className="la la-list";
     } else if (appName == 'Finder') {
-     className="far fa-folder";
+        className="far fa-folder";
     } else if (appName == 'Messages') {
-     className="far fa-comments";
+        className="far fa-comments";
     } else if (appName == 'Calendar') {
-     className="far fa-calendar-alt";
+        className="la la-calendar";
     } else if (appName == 'iTerm2') {
-     className="fas fa-terminal";
+        className="la la-terminal";
     } else if (appName == 'Skype') {
-     className="fab fa-skype";
+        className="fab fa-skype";
     } else if (appName == 'Xcode') {
-     className="fab fa-xing";
-    } else if (appName == 'AndroidStudio') {
-     className="fab fa-android";
-    } else if (appName == 'NetBeans') {
-     className="fas fa-dice-d6";
-    } else if (appName == 'IntelliJIDEA') {
-     className="fab fa-java";
+        className="fab fa-xing";
     } else if (appName == 'Spotify') {
-     className="fab fa-spotify";
-    } else if (appName == 'Code') {
-     className="fas fa-code";
+        className="la la-spotify";
+    } else if (appName == 'Preview') {
+        className="la la-file-text";
     } else if (appName == 'Microsoft Excel') {
-     className="far fa-file-excel"
+        className="la la-th-list"
+    } else if (appName == 'qbittorrent') {
+        className="la la-cloud-download"
+    } else if (appName == 'mpv') {
+        className="la la-play-circle"
+    } else if (appName == 'None') {
+        className="la la-circle"
+    } else if (appName == 'Lightroom Classic' | appName == 'Photoshop CC') {
+        className="la la-camera-retro"
+    } else if (appName == 'Adobe Premiere Pro CC 2019' | appName == 'Final Cut Pro' | appName == 'Adobe Media Encoder CC 2019') {
+        className="la la-video-camera"
+    } else if (appName == 'System Preferences') {
+        className="la la-cog"
+    } else {
+        console.log(appName);
+        className="la la-question-circle";
     }
-      else {
-     className="far fa-question-circle";
-    }
+    const fontScale = (className.slice(0,2) == 'fa') ? '1.3em' : '1.7em'
     return (
-        <i className={className} style={{ margin: '0.2em', color: '#2f2f2f', fontSize: '1.2em'}}/>
+        <i className={className} style={{ margin: '0 0.15em 0 0.15em', color: '#2f2f2f', fontSize: fontScale}}/>
     );
 }
 
@@ -116,7 +123,6 @@ const style = {
 export const render = (output) => {
     const dat = JSON.parse(String(output.output).replace(/\'/g, '"'));
     const renderFinal = containerize(dat[0]);
-    console.log(renderFinal)
     return (
         <div style={style}>
             {renderFinal}

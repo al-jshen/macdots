@@ -24,32 +24,28 @@ render: ( ) ->
 
     <div class="widg" id="netid">
     <div class="icon-container" id='netid-icon-container'>
-        <i class="fas fa-wifi"></i>
+        <i class="la la-wifi"></i>
     </div>
         <span class="output" id="netid-output"></span>
     </div>
 
-    <!--
     <div class="widg" id="dwl">
     <div class="icon-container" id='dwl-icon-container'>
         <i class="fas fa-download"></i>
     </div>
         <span class="output" id="dwl-output"></span>
     </div>
-    -->
 
-    <!--
     <div class="widg" id="upl">
     <div class="icon-container" id='upl-icon-container'>
         <i class="fas fa-upload"></i>
     </div>
         <span class="output" id="upl-output"></span>
     </div>
-    -->
 
     <div class="widg" id="cpu">
     <div class="icon-container" id='cpu-icon-container'>
-        <i class="fas fa-microchip"></i>
+        <i class="la la-gears"></i>
     </div>
         <span class="output" id="cpu-output"></span>
     </div>
@@ -63,11 +59,11 @@ render: ( ) ->
 
     <div class="widg" id="hdd">
     <div class="icon-container" id='hdd-icon-container'>
-        <i class="fas fa-database"></i>
+        <i class="fa fa-database"></i>
     </div>
         <span class="output" id="hdd-output"></span>
     </div>
-    
+
     <div class="widg" id="datetime">
         <span class="output" id="datetime-output"></span>
     </div>
@@ -90,8 +86,8 @@ update: ( output, domEl ) ->
     mem = output[ 1 ]
     hdd = output[ 2 ]
     net = output[ 3 ].split( /@/g )
-    upl = net[ 0 ]
-    dwl = net[ 1 ]
+    dwl = net[ 0 ]
+    upl = net[ 1 ]
     netid = output[ 4 ]
     datetime = output[ 5 ]
 
@@ -161,8 +157,8 @@ style: """
     background-color: #272C34
     font-family: Roboto
     font-size: 12px
-    height: 30px
-    padding: .1em 0.5em 0.1em 0.5em
+    max-height: 30px
+    padding: 0em 0.5em 0.1em 0.5em
 
     position: fixed
     left: 80%
@@ -176,24 +172,31 @@ style: """
         justify-content: center
         align-items: center
         padding: 0.2em
+        border: 0px solid #fff
+        max-height: 26px
 
     .widg
         display: flex
         flex-direction: row
         justify-content: center
         align-items: center
-        margin: 0.5em
+        margin: 0.6em
 
     .icon-container
-        margin-right: 0.3em
+        margin-right: 0.4em
 
     .output
         color: #f2f2f2
         white-space: nowrap
 
+    .la
+        font-size: 1.8em
+    .fa
+        font-size: 1.2em
+        font-weight: lighter
+
     .blue
         color: #73AEEA
-
     .green
         color: #A1C181
     .yellow
