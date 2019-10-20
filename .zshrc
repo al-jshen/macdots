@@ -1,5 +1,6 @@
 # .zshrc
-setopt autocd
+setopt autocd # cd without typing cd
+setopt rm_star_silent # dont ask to confirm rm
 
 
 ### Added by Zplugin's installer
@@ -62,15 +63,21 @@ alias md='mkdir'
 alias rd='rmdir'
 alias vim='nvim'
 alias v='nvim'
+alias st='say testing sound'
+alias clss='rm -r /Users/js/screenshots/* -y'
+alias updatedb='/usr/libexec/locate.updatedb'
 
 # | custom functions | #
 vcomp() {
 	ffmpeg -i $1 -vcodec libx264 -crf 20 $2
 }
 
+vconv() {
+    ffmpeg -i $1 -codec copy $2
+}
+
 vtrim() {
     ffmpeg -i $1 -ss $2 -to $3 -c:v copy -c:a copy $4
-
 }
 
 audex() {
