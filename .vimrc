@@ -11,7 +11,7 @@ call plug#begin('~/.vim/plugged/')
 	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'scrooloose/nerdtree'
     Plug 'vim-airline/vim-airline'
-    Plug 'ervandew/supertab'
+    "Plug 'ervandew/supertab'
 
 	"Plug 'Valloric/YouCompleteMe' " too heavy
 	"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
@@ -19,7 +19,16 @@ call plug#begin('~/.vim/plugged/')
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 
+set mouse=a
 set statusline^=%{coc#status()}
+
+" Buffer configurations
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#buffer_nr_show = 1
+
+" Window splitting 
+set splitbelow
+set splitright
 
 " Syntax Highlighting
 let python_highlight_all=1
@@ -42,7 +51,7 @@ au BufNewFile,BufRead *.py
     \ set fileformat=unix
 
 " Python Provider
-let g:python3_host_prog = '/usr/local/bin/python3'
+let g:python3_host_prog = '/usr/local/opt/python/bin/python3.7'
 
 " UTF-8 Support
 set encoding=utf-8
@@ -79,7 +88,6 @@ map <silent> <C-n> :NERDTreeToggle<CR>
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd StdinReadPre * let s:std_in=1
 autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-set mouse=a
 let g:NERDTreeMouseMode=3 
 
 "Completion Customizations
@@ -90,7 +98,23 @@ let g:NERDTreeMouseMode=3
 "	\   'python': [ 're!\w{1}' ]
 "	\ }
 let g:SuperTabDefaultCompletionType = "<c-n>"
+set completeopt=longest,menuone
 set completeopt-=preview
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" Navigating completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~# '\s'
+endfunction
+
+let g:coc_snippet_next = '<tab>'
 
 " Line Numbers
 set nu
@@ -101,9 +125,6 @@ set foldlevel=99
 
 " Enable folding with the spacebar
 nnoremap <space> za
-
-" Tab completion
-inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
 " Automatically Close Brackets
 inoremap {      {}<Left>
@@ -158,7 +179,6 @@ function MyCustomHighlights()
     hi semshiSelf            ctermfg=249 guifg=#b2b2b2
     hi semshiUnresolved      ctermfg=226 guifg=#ffff00 cterm=underline gui=underline
     hi semshiSelected        ctermfg=231 guifg=#ffffff ctermbg=161 guibg=#d7005f
-
     hi semshiErrorSign       ctermfg=231 guifg=#ffffff ctermbg=160 guibg=#d70000
     hi semshiErrorChar       ctermfg=231 guifg=#ffffff ctermbg=160 guibg=#d70000
 endfunction
