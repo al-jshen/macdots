@@ -64,7 +64,7 @@ alias rd='rmdir'
 alias vim='nvim'
 alias v='nvim'
 alias st='say testing sound'
-alias clss='rm -r /Users/js/screenshots/* -y'
+alias clss='rm -r /Users/js/screenshots/*'
 alias updatedb='/usr/libexec/locate.updatedb'
 
 # | custom functions | #
@@ -88,4 +88,18 @@ fkill() {
     for PRCS in `ps -ef | grep -e $1 | pid`; do
         kill $PRCS;
     done
+}
+
+gitforkeven() {
+    git remote add upstream $1
+    git fetch upstream
+    git pull upstream master
+    git push
+}
+
+pdftex() {
+    pdflatex -interaction=nonstopmode $1
+    bname=$(basename $1 .tex)
+    bname+=".pdf"
+    open $bname
 }

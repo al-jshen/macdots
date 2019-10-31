@@ -17,6 +17,7 @@ call plug#begin('~/.vim/plugged/')
 	"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
     "Plug 'zchee/deoplete-jedi' "too slow
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
+    Plug 'lervag/vimtex'
 call plug#end()
 
 set mouse=a
@@ -165,8 +166,8 @@ endfunction
 set background=dark
 colorscheme one 
 
-" Rehighlight Semshi after colorscheme change
 
+" Rehighlight Semshi after colorscheme change
 function MyCustomHighlights()
     hi semshiLocal           ctermfg=209 guifg=#ff875f
     hi semshiGlobal          ctermfg=214 guifg=#ffaf00
