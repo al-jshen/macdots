@@ -66,6 +66,7 @@ alias v='nvim'
 alias st='say testing sound'
 alias clss='rm -r /Users/js/screenshots/*'
 alias updatedb='/usr/libexec/locate.updatedb'
+alias texwatch='latexmk -pdf -pvc'
 
 # | custom functions | #
 vcomp() {
