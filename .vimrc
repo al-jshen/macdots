@@ -22,6 +22,7 @@ call plug#end()
 
 set mouse=a
 set statusline^=%{coc#status()}
+" set wrap linebreak nolist
 
 " Buffer configurations
 let g:airline#extensions#tabline#enabled = 1
@@ -144,10 +145,15 @@ set expandtab       " Expand TABs to spaces
 set autoindent
 set smartindent
 
-
 " Don't wrap lines
 set formatoptions-=t
 set nowrap
+
+" wrap .tex files
+augroup WrapLineInTeXFile
+    autocmd!
+    autocmd FileType tex setlocal wrap linebreak nolist
+augroup END
 
 " Enable incrementing letters
 set nrformats+=alpha
@@ -185,3 +191,4 @@ function MyCustomHighlights()
 endfunction
 
 autocmd ColorScheme * call MyCustomHighlights()
+
