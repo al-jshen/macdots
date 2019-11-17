@@ -1,6 +1,9 @@
 call plug#begin('~/.vim/plugged/')
 	Plug 'vim-scripts/indentpython.vim'
 	Plug 'vim-syntastic/syntastic'
+    Plug 'sheerun/vim-polyglot'
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
 	Plug 'nvie/vim-flake8'
 	Plug 'tmhedberg/SimpylFold'
 	Plug 'Raimondi/delimitMate'
@@ -153,6 +156,7 @@ set nowrap
 augroup WrapLineInTeXFile
     autocmd!
     autocmd FileType tex setlocal wrap linebreak nolist
+    autocmd FileType txt setlocal wrap linebreak nolist
 augroup END
 
 " Enable incrementing letters
@@ -170,7 +174,7 @@ endfunction
 
 " Theming
 set background=dark
-colorscheme one 
+colorscheme one
 
 
 " Rehighlight Semshi after colorscheme change
