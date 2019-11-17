@@ -1,0 +1,7 @@
+python.setInterpreter
+python.setLinter
+python.enableLinting
+python.upgradePythonLanguageServer
+python
+Python
+tabnine.openConfig

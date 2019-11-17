@@ -1,0 +1,30 @@
+{
+  "commands": {
+    "%2FUsers%2Fjs": [
+      ":q",
+      "python.upg",
+      "py",
+      "python.upgradePyth",
+      "python.upgradePythonLanguageServer",
+      "python.lin",
+      "python.set"
+    ]
+  },
+  "diagnostics": {
+    "%2FUsers%2Fjs": [
+      ":q",
+      ":q:q"
+    ]
+  },
+  "extensions": {
+    "%2FUsers%2Fjs%2Fprograms%2Fmacdots": [
+      ":CocInst"
+    ],
+    "%2FUsers%2Fjs": [
+      ":q"
+    ],
+    "%2FUsers%2Fjs%2Fprograms": [
+      ":q"
+    ]
+  }
+}
