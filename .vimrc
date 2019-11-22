@@ -1,26 +1,43 @@
 call plug#begin('~/.vim/plugged/')
+    " General
 	Plug 'vim-scripts/indentpython.vim'
 	Plug 'vim-syntastic/syntastic'
-    Plug 'sheerun/vim-polyglot'
-    Plug 'yuezk/vim-js'
-    Plug 'maxmellon/vim-jsx-pretty'
-	Plug 'nvie/vim-flake8'
 	Plug 'tmhedberg/SimpylFold'
-	Plug 'Raimondi/delimitMate'
     Plug 'Shougo/echodoc.vim'
 	Plug 'roxma/nvim-yarp'
 	Plug 'roxma/vim-hug-neovim-rpc'
-	"Plug 'davidhalter/jedi-vim'
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'scrooloose/nerdtree'
     Plug 'vim-airline/vim-airline'
     "Plug 'ervandew/supertab'
+	Plug 'Raimondi/delimitMate'
+    Plug 'alvan/vim-closetag'
 
+    " Syntax/Highlighting
+    Plug 'sheerun/vim-polyglot'
+    Plug 'yuezk/vim-js'
+    Plug 'lervag/vimtex'
+    Plug 'JuliaEditorSupport/julia-vim'
+    Plug 'maxmellon/vim-jsx-pretty'
+    Plug 'elzr/vim-json'
+	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'pangloss/vim-javascript'
+
+    " Linting
+	Plug 'nvie/vim-flake8'
+
+    " Completion 
 	"Plug 'Valloric/YouCompleteMe' " too heavy
 	"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
     "Plug 'zchee/deoplete-jedi' "too slow
+	"Plug 'davidhalter/jedi-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
-    Plug 'lervag/vimtex'
+    
+    " Snippets, mostly for React 
+    Plug 'SirVer/ultisnips'
+    Plug 'honza/vim-snippets'
+    Plug 'mlaursen/vim-react-snippets'
+
+
 call plug#end()
 
 set mouse=a
@@ -58,6 +75,9 @@ au BufNewFile,BufRead *.py
 " Python Provider
 let g:python3_host_prog = '/usr/local/opt/python/bin/python3.7'
 
+" julia
+let g:default_julia_version = '1.0'
+
 " UTF-8 Support
 set encoding=utf-8
 
@@ -77,6 +97,9 @@ let g:echodoc#enable_at_startup = 1
 
 " Disable jedi-vim completions in favour of deoplete-jedi's
 "let g:jedi#completions_enabled = 0
+
+" Snippet completion
+let g:UltiSnipsExpandTrigger="<tab>"
 
 " Syntastic Configurations
 let g:syntastic_python_checkers = ['flake8']
@@ -131,6 +154,50 @@ set foldlevel=99
 " Enable folding with the spacebar
 nnoremap <space> za
 
+" Tag closing configuration %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+"
+" filenames like *.xml, *.html, *.xhtml, ...
+" These are the file extensions where this plugin is enabled.
+"
+let g:closetag_filenames = '*.html,*.xhtml,*.phtml'
+
+" filenames like *.xml, *.xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filenames = '*.xhtml,*.jsx'
+
+" filetypes like xml, html, xhtml, ...
+" These are the file types where this plugin is enabled.
+"
+let g:closetag_filetypes = 'html,xhtml,phtml'
+
+" filetypes like xml, xhtml, ...
+" This will make the list of non-closing tags self-closing in the specified files.
+"
+let g:closetag_xhtml_filetypes = 'xhtml,jsx'
+
+" integer value [0|1]
+" This will make the list of non-closing tags case-sensitive (e.g. `<Link>` will be closed while `<link>` won't.)
+"
+let g:closetag_emptyTags_caseSensitive = 1
+
+" dict
+" Disables auto-close if not in a "valid" region (based on filetype)
+"
+let g:closetag_regions = {
+    \ 'typescript.tsx': 'jsxRegion,tsxRegion',
+    \ 'javascript.jsx': 'jsxRegion',
+    \ }
+
+" Shortcut for closing tags, default is '>'
+"
+let g:closetag_shortcut = '>'
+
+" Add > at current position without closing the current tag, default is ''
+"
+let g:closetag_close_shortcut = '<leader>>'
+" %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 " Automatically Close Brackets
 inoremap {      {}<Left>
 inoremap {<CR>  {<CR>}<Esc>O
@@ -147,6 +214,7 @@ set softtabstop=4   " Sets the number of columns for a TAB
 set expandtab       " Expand TABs to spaces
 set autoindent
 set smartindent
+
 
 " Don't wrap lines
 set formatoptions-=t
