@@ -1,6 +1,6 @@
 # open applications
-cmd - return : /Users/js/programs/scripts/openIterm.sh
-cmd - q      : /Users/js/programs/scripts/openChrome.sh
+cmd - return : "${HOME}"/programs/scripts/openIterm.sh
+cmd - q      : "${HOME}"/programs/scripts/openChrome.sh
 
 # reload yabai configuration file
 ctrl + alt + cmd - r : launchctl kickstart -k "gui/${UID}/homebrew.mxcl.yabai"
@@ -12,26 +12,26 @@ cmd + alt - f : yabai -m window --toggle float;\
 
 
 # switch spaces
-cmd - 1 : /Users/js/programs/scripts/changeSpaces.sh 1
-cmd - 2 : /Users/js/programs/scripts/changeSpaces.sh 2
-cmd - 3 : /Users/js/programs/scripts/changeSpaces.sh 3
-cmd - 4 : /Users/js/programs/scripts/changeSpaces.sh 4
-cmd - 5 : /Users/js/programs/scripts/changeSpaces.sh 5
-cmd - 6 : /Users/js/programs/scripts/changeSpaces.sh 6
-cmd - 7 : /Users/js/programs/scripts/changeSpaces.sh 7
-cmd - 8 : /Users/js/programs/scripts/changeSpaces.sh 8
-cmd - 9 : /Users/js/programs/scripts/changeSpaces.sh 9
-cmd - 0 : /Users/js/programs/scripts/changeSpaces.sh 10
+cmd - 1 : "${HOME}"/programs/scripts/changeSpaces.sh 1
+cmd - 2 : "${HOME}"/programs/scripts/changeSpaces.sh 2
+cmd - 3 : "${HOME}"/programs/scripts/changeSpaces.sh 3
+cmd - 4 : "${HOME}"/programs/scripts/changeSpaces.sh 4
+cmd - 5 : "${HOME}"/programs/scripts/changeSpaces.sh 5
+cmd - 6 : "${HOME}"/programs/scripts/changeSpaces.sh 6
+cmd - 7 : "${HOME}"/programs/scripts/changeSpaces.sh 7
+cmd - 8 : "${HOME}"/programs/scripts/changeSpaces.sh 8
+cmd - 9 : "${HOME}"/programs/scripts/changeSpaces.sh 9
+cmd - 0 : "${HOME}"/programs/scripts/changeSpaces.sh 10
 
 # send window to space
-cmd + shift - 1 : /Users/js/programs/scripts/moveWindow.sh 1
-cmd + shift - 2 : /Users/js/programs/scripts/moveWindow.sh 2 
-cmd + shift - 3 : /Users/js/programs/scripts/moveWindow.sh 3
-cmd + shift - 4 : /Users/js/programs/scripts/moveWindow.sh 4
-cmd + shift - 5 : /Users/js/programs/scripts/moveWindow.sh 5
-cmd + shift - 6 : /Users/js/programs/scripts/moveWindow.sh 6
-cmd + shift - 7 : /Users/js/programs/scripts/moveWindow.sh 7
-cmd + shift - 8 : /Users/js/programs/scripts/moveWindow.sh 8
-cmd + shift - 9 : /Users/js/programs/scripts/moveWindow.sh 9
-cmd + shift - 0 : /Users/js/programs/scripts/moveWindow.sh 10
+cmd + shift - 1 : "${HOME}"/programs/scripts/moveWindow.sh 1
+cmd + shift - 2 : "${HOME}"/programs/scripts/moveWindow.sh 2 
+cmd + shift - 3 : "${HOME}"/programs/scripts/moveWindow.sh 3
+cmd + shift - 4 : "${HOME}"/programs/scripts/moveWindow.sh 4
+cmd + shift - 5 : "${HOME}"/programs/scripts/moveWindow.sh 5
+cmd + shift - 6 : "${HOME}"/programs/scripts/moveWindow.sh 6
+cmd + shift - 7 : "${HOME}"/programs/scripts/moveWindow.sh 7
+cmd + shift - 8 : "${HOME}"/programs/scripts/moveWindow.sh 8
+cmd + shift - 9 : "${HOME}"/programs/scripts/moveWindow.sh 9
+cmd + shift - 0 : "${HOME}"/programs/scripts/moveWindow.sh 10
 

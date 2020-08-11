@@ -1,15 +1,15 @@
 call plug#begin('~/.vim/plugged/')
     " General
-	Plug 'vim-scripts/indentpython.vim'
-	Plug 'vim-syntastic/syntastic'
-	Plug 'tmhedberg/SimpylFold'
+    Plug 'vim-scripts/indentpython.vim'
+    Plug 'vim-syntastic/syntastic'
+    Plug 'tmhedberg/SimpylFold'
     Plug 'Shougo/echodoc.vim'
-	Plug 'roxma/nvim-yarp'
-	Plug 'roxma/vim-hug-neovim-rpc'
+    Plug 'roxma/nvim-yarp'
+    Plug 'roxma/vim-hug-neovim-rpc'
     Plug 'scrooloose/nerdtree'
     Plug 'vim-airline/vim-airline'
     "Plug 'ervandew/supertab'
-	Plug 'Raimondi/delimitMate'
+    Plug 'Raimondi/delimitMate'
     Plug 'alvan/vim-closetag'
 
     " Syntax/Highlighting
@@ -19,17 +19,17 @@ call plug#begin('~/.vim/plugged/')
     Plug 'JuliaEditorSupport/julia-vim'
     Plug 'maxmellon/vim-jsx-pretty'
     Plug 'elzr/vim-json'
-	Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
+    Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
     Plug 'pangloss/vim-javascript'
 
     " Linting
-	Plug 'nvie/vim-flake8'
+    Plug 'nvie/vim-flake8'
 
     " Completion 
-	"Plug 'Valloric/YouCompleteMe' " too heavy
-	"Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
+    "Plug 'Valloric/YouCompleteMe' " too heavy
+    "Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' } "too slow
     "Plug 'zchee/deoplete-jedi' "too slow
-	"Plug 'davidhalter/jedi-vim'
+    "Plug 'davidhalter/jedi-vim'
     Plug 'neoclide/coc.nvim', {'branch': 'release'}
     
     " Snippets, mostly for React 
